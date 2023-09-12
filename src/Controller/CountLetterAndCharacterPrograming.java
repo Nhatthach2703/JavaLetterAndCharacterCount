@@ -45,11 +45,12 @@ public class CountLetterAndCharacterPrograming extends Menu<String>{
         StringTokenizer tokenizer = new StringTokenizer(str);
         while (tokenizer.hasMoreTokens()) {
             String token = tokenizer.nextToken();
-            if (isAllLetters(token)) {
-                if (!letterCounter.containsKey(token)) {
-                    letterCounter.put(token, 1);
+            String cleanToken = removeSpecialCharacters(token);
+            if (isAllLetters(cleanToken)) {
+                if (!letterCounter.containsKey(cleanToken)) {
+                    letterCounter.put(cleanToken, 1);
                 } else {
-                    letterCounter.put(token, letterCounter.get(token) + 1);
+                    letterCounter.put(cleanToken, letterCounter.get(cleanToken) + 1);
                 }
             }
         }
@@ -71,5 +72,15 @@ public class CountLetterAndCharacterPrograming extends Menu<String>{
             }
         }
         return true;
+    }
+    
+    private String removeSpecialCharacters(String str) {
+        StringBuilder cleanToken = new StringBuilder();
+        for (char ch : str.toCharArray()) {
+            if (Character.isLetter(ch) || Character.isWhitespace(ch)) {
+                cleanToken.append(ch);
+            }
+        }
+        return cleanToken.toString();
     }
 }
