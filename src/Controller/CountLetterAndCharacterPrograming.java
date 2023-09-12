@@ -78,7 +78,7 @@ public class CountLetterAndCharacterPrograming extends Menu<String>{
         StringBuilder cleanToken = new StringBuilder();
         for (char ch : str.toCharArray()) {
             if (Character.isLetter(ch) || Character.isWhitespace(ch)) {
-                cleanToken.append(ch);
+                cleanToken.append(ch); 
             }
         }
         return cleanToken.toString();
