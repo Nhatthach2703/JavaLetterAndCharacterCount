@@ -25,10 +25,10 @@ public class CountLetterAndCharacterPrograming extends Menu<String>{
         super("PROGRAMMING", mc);
         l = new Library();
         str = l.getString("Input string: ");
-        count(str);
     }
     
     public void execute(int n) {
+        count(str);
         switch (n) {
             case 1: // Print Character count
                 System.out.println(letterCounter);
