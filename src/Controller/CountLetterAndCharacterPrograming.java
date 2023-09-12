@@ -16,10 +16,10 @@ import java.util.StringTokenizer;
  */
 public class CountLetterAndCharacterPrograming extends Menu<String>{
     static String[] mc = {"Letter Count", "Character Count", "Exit"};
-    String str;
-    Library l;
     private Map<Character, Integer> charCounter =  new HashMap<Character, Integer>();
     private Map<String, Integer> letterCounter = new HashMap<String, Integer>();
+    String str;
+    Library l;
     
     public CountLetterAndCharacterPrograming() {
         super("PROGRAMMING", mc);
@@ -63,6 +63,7 @@ public class CountLetterAndCharacterPrograming extends Menu<String>{
             }
         }
     }
+    
     private boolean isAllLetters(String str) {
         for (char ch : str.toCharArray()) {
             if (!Character.isLetter(ch)) {
