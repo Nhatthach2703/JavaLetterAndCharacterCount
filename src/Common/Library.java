@@ -21,7 +21,7 @@ public class Library {
     }
 
     public String getString(String mes) {
-        System.out.println(mes);
+        System.out.print(mes);
         return sc.nextLine();
     }
 
