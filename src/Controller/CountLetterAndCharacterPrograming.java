@@ -22,7 +22,7 @@ public class CountLetterAndCharacterPrograming extends Menu<String>{
     Library l;
     
     public CountLetterAndCharacterPrograming() {
-        super("PROGRAMMING", mc);
+        super("Count Menu", mc);
         l = new Library();
         str = l.getString("Input string: ");
     }
@@ -36,7 +36,7 @@ public class CountLetterAndCharacterPrograming extends Menu<String>{
             case 2: // Print Letter count
                 System.out.println(charCounter);
                 break;
-            case 3:
+            case 3: // Exit
                 System.exit(0);
         }
     }
